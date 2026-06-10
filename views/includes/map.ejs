@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="col-md-6">
+    <gmp-map
+      center="<%= listing.coordinates[0] %>, <%= listing.coordinates[1] %>" 
+      zoom="5" 
+      map-id="DEMO_MAP_ID"
+      style="height: 300px;">
+        <gmp-advanced-marker id="marker" position="<%= listing.coordinates[0] %>,<%= listing.coordinates[1] %>" title="<%= listing.title %>"></gmp-advanced-marker>
+    </gmp-map>
+    
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=<%=mapKey%>&libraries=maps,marker"defer>
+    </script>
+  </div>
+</div>

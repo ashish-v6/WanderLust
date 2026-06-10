@@ -1,0 +1,63 @@
+<%- layout("/layouts/boilerplate.ejs") %>
+
+    <body>
+        <div class="row mt-4">
+            <div class="col-md-8">
+                <h2 style="text-decoration: underline;" class="mb-3">Edit Listing</h2>
+                <form method="post" action="/listings/<%= listing._id %>?_method=PUT" enctype="multipart/form-data" class="needs-validation" novalidate>
+
+                    <div class="mb-3">
+                        <label for="title" class="form-label">Title</label>
+                        <input type="text" name="listing[title]" placeholder="Enter title" value="<%= listing.title %>"
+                            class="form-control" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="description" class="form-label">Description</label>
+                        <textarea name="listing[description]" class="form-control"><%= listing.description %></textarea>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="image" class="form-label mb-1">Upload new image</label><br>
+                        <img src="<%= listing.image.url %>" width="250px" alt="" class="mb-2">
+                        <input type="file" name="listing[image]" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="Category" class="form-label">Category</label>
+                        <select class="form-select" aria-label="Default select example" name="listing[category]" required>
+                            <option value="mountain">mountain</option>
+                            <option value="beach">beach</option>
+                            <option value="city">city</option>
+                            <option value="resort">resort</option>
+                            <option value="cafe">cafe</option>
+                            <option value="villa">villa</option>
+                            <option value="banglow">banglow</option>
+                            <option value="flat">flat</option>
+                            <option value="jungle">jungle</option>
+                        </select>
+                    </div>
+
+                    <div class="row">
+                        <div class="mb-3 col-md-4">
+                            <label for="price" class="form-label">Price</label>
+                            <input type="text" name="listing[price]" placeholder="Enter Price"
+                                value="<%= listing.price %>" class="form-control">
+                        </div>
+
+                        <div class="mb-3 col-md-8">
+                            <label for="location" class="form-label">Location</label>
+                            <input type="text" name="listing[location]" placeholder="Enter location"
+                                value="<%= listing.location %>" class="form-control">
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <label for="country" class="form-label">Country</label>
+                        <input type="text" name="listing[country]" placeholder="Enter country"
+                            value="<%= listing.country %>" class="form-control">
+                    </div>
+
+                    <button class="btn btn-danger mb-5">Edit</button>
+                </form>
+            </div>
+        </div>
+    </body>
