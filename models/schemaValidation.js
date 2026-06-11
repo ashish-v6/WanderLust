@@ -1,5 +1,5 @@
 const joi = require("joi");
-const ExpressError = require("./utils/ExpressError");
+const ExpressError = require("../utils/ExpressError");
 
 const listingSchema = joi.object({
     listing : joi.object({

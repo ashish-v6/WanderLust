@@ -1,11 +1,11 @@
 const express = require("express");
 const router = express.Router();
 const wrapAsync = require("../utils/wrapAsync.js");
-const { validateListing } = require("../schema.js");
-const { isLoggedIn, isOwner, setGeoData } = require("../middlewares.js");
+const { validateListing } = require("../models/schemaValidation.js");
+const { isLoggedIn, isOwner, setGeoData } = require("../utils/middlewares.js");
 const controllers = require("../controller/listing.js");
 const multer = require("multer");
-const {storage} = require("../cloudConfig.js");
+const {storage} = require("../config/cloudConfig.js");
 const upload = multer({storage});
 
 

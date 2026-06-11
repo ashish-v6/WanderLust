@@ -1,5 +1,5 @@
-const Listing = require("./models/listing");
-const Review = require("./models/review");
+const Listing = require("../models/listing");
+const Review = require("../models/review");
 const passport = require("passport");
 
 module.exports.authUser = passport.authenticate("local",{

@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router({ mergeParams: true });
-const { saveRedirectUrl, authUser } = require("../middlewares.js");
+const { saveRedirectUrl, authUser } = require("../utils/middlewares.js");
 const controllers = require("../controller/user.js");
 
 router
