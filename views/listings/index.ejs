@@ -5,12 +5,9 @@
         <div class="row gx-2">
             <% for(listing of allListings){ %>
                 <div class="col-sm-6 col-lg-4 col-xl-3">
-                <div class="card listing-card p-3 m-2">
+                <div class="card listing-card pt-3 pb-3 pe-3 m-2">
                     <a href="/listings/<%= listing._id %>">
                     <img src="<%= listing.image.url %>" class="card-img-top" alt="Listing image">
-                    <div class="card-img-overlay">
-                        <h5 class="card-overlay"></h5>
-                    </div>
                     <div class="card-body p-0 pt-2 ">
                         <p class="card-text">
                             <b>
